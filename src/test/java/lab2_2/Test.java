@@ -39,4 +39,13 @@ public class Test {
 			Money m2 = new Money(10);
 			Assert.assertEquals(true, m1.multiplyBy(2).lessOrEquals(m2));
 		}
+		
+		@org.junit.Test
+		public void AddMoneyTest() 
+		{
+			Money m1 = new Money(5);
+			Money m2 = new Money(10);
+			Money m3 = new Money(15);
+			Assert.assertEquals(true, m1.add(m2).lessOrEquals(m3));
+		}
 }
