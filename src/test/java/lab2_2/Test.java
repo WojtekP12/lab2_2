@@ -57,4 +57,14 @@ public class Test {
 			Money m3 = new Money(5);
 			Assert.assertEquals(true, m2.subtract(m1).lessOrEquals(m3));
 		}
+		
+		@org.junit.Test
+		public void MoneyEqualsTest() 
+		{
+			Money m1 = new Money(5);
+			Money m2 = m1;
+			Assert.assertEquals(true, m1.equals(m2));
+			Assert.assertEquals(false, m1.equals(null));
+			Assert.assertEquals(false, m1.equals(new Id("5")));		
+		}
 }
