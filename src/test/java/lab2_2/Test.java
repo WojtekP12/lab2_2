@@ -6,6 +6,7 @@ import org.junit.Assert;
 
 import pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.ClientData;
 import pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.Id;
+import pl.com.bottega.ecommerce.sharedkernel.Money;
 
 public class Test {
 
@@ -28,5 +29,14 @@ public class Test {
 			
 			Id id5 = new Id("1");
 			Assert.assertEquals(true, id5.equals(id1));
+		}
+		
+		//MONEY TESTS
+		@org.junit.Test
+		public void MultiMoneyTest() 
+		{
+			Money m1 = new Money(5);
+			Money m2 = new Money(10);
+			Assert.assertEquals(true, m1.multiplyBy(2).lessOrEquals(m2));
 		}
 }
